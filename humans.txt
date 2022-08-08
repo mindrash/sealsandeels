@@ -1,0 +1,10 @@
+/* TEAM */                  
+Your title: mindrash        
+Site: http://sealsandeels.xyz
+Twitter: @mindrash
+							
+/* THANKS */
+- Steve Rinella and krose for the inspiration
+- NFT.Storage for the pins
+- Matplotlib - data can be beautiful and meaningful
+- Chiru Labs, Openzeppelin

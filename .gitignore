@@ -3,12 +3,17 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+CIDS.csv
 ipfs_out/
 meta_out/
+meta_out_prep/
 img_out/
+headshots_out/
+img_*
 logs/
 pieces/
 sealsandeels.py
+*.py
 *.zip
 pieces/
 
