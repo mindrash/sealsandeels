@@ -12,7 +12,7 @@ async function mint() {
       })
         .then(function (user) {
           address = user.get("ethAddress");
-          cost = 25000000000000000;
+          cost = 50000000000000000;
           console.log("logged in user:", user);
           console.log(user.get("ethAddress"));
 
