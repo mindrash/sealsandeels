@@ -458,12 +458,12 @@
         <h3 style="color: #5f146e;">
           Seals mint in even hours. Eels mint in odd hours.
         </h3>
-        <a class="btn btn-download" href="#" onclick="minter();return false;"><strong>Mint Beta </strong>
+        <a class="btn btn-download" href="#" onclick="return false;"><strong>Public Mint Aug 31 </strong>
         <span class="version"> for .05 ETH</span></a>
         <p style="color: #333;font-size: smaller; padding: .5em;">
           Don't trust this site? Mint on <a href="https://rinkeby.etherscan.io/address/0x9f5e89DD13d8c2f7DE420dDed7943E93948f5eCf#writeContract#F2" target="_blank">Etherscan</a>.
         </p>    
-        <p style="color: #5f146e;padding-top:1em;background-color: #fff;;border-radius: 25px;padding: 10px;margin: 1em;">
+        <p style="color: #fff;padding-top:1em;background-color: #5f146e;;border-radius: 25px;padding: 10px;margin: 1em;">
           If <strong>100</strong> Seals or Eels are minted in an hour then they are <strong><i>rewarded</i></strong> with <strong>special weather</strong> and the other is <strong><i>punished</i></strong> with <strong>bad weather</strong>.
         </p>
         <!--
@@ -481,7 +481,7 @@
   </div>
   <div class="site-section" style="background-color: #f5f9bf;width: 80%;max-width: 600px;margin: 1em auto;padding: 2em;opacity:.90;border-radius: 25px;">
     <div class="container">
-      <h2>Quiet. This is Seriously Good.</h2>
+      <h2>Quiet. This Is Seriously Good.</h2>
       <div class=grid>
           <div class=grid-cell>
               <h3>Generative Art Component</h3>
@@ -709,9 +709,9 @@ Special thanks:
 <script src="js/vendor/modernizr-3.11.2.min.js"></script>
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
-<script src="abi.js"></script>
-<script src="mint.js"></script>
-<script src="minter.js"></script>
+<script src="abi.js?v1"></script>
+<script src="mint.js?v1"></script>
+<script src="minter.js?v1"></script>
 
 <script>!function (l, u) { "use strict"; var t, e, a, n, o, r, d = l.document; function i(t) { var e, a, n, o, r, i, c, g = function t(e, a) { return !0 === e.hasAttribute(a) ? e : e.parentNode !== d.body ? t(e.parentNode, a) : u }(t.target, "data-ga-action"), s = !1; g !== u && (e = g.getAttribute("data-ga-action") || u, a = g.getAttribute("data-ga-category") || u, n = g.getAttribute("data-ga-label") || u, o = g.getAttribute("href"), r = parseInt(g.getAttribute("data-ga-value"), 10) || u, ga !== u && a !== u && e !== u && (t.preventDefault(), "Download" !== a && !0 !== t.ctrlKey && !0 !== t.metaKey && 2 !== t.which || (s = !0, l.open(o)), i = o, ga("send", "event", a, e, n, r, { hitCallback: function () { !1 === s && (c !== u && clearTimeout(c), l.location = i) } }), c = setTimeout(function () { !1 === s && (l.location.href = i) }, 1e3))) } e = d, a = "script", n = "ga", (t = l).GoogleAnalyticsObject = n, t.ga || (t.ga = function () { (t.ga.q = t.ga.q || []).push(arguments) }), t.ga.l = +new Date, o = e.createElement(a), r = e.getElementsByTagName(a)[0], o.src = "https://www.google-analytics.com/analytics.js", r.parentNode.insertBefore(o, r), ga("create", "UA-17904194-1", "auto"), ga("set", "anonymizeIp", !0), ga("send", "pageview"), l.document.addEventListener("click", i), l.onload = function () { var t, e, a, n, o; e = "script", a = "twitter-wjs", o = (t = d).getElementsByTagName(e)[0], t.getElementById(a) || ((n = t.createElement(e)).id = a, n.src = "https://platform.twitter.com/widgets.js", o.parentNode.insertBefore(n, o)) } }(window)</script>
 </body>

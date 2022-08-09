@@ -1,12 +1,11 @@
-async function minter(){
-    var result = await mint();
-    var statusText = "";
-    var mintStatus = document.getElementById("mintStatus");
-    if (result == null)
-    {
-        statusText= "Transaction failed";
-        mintStatus.style.display = "block";
-    } else {
-        mintStatus.style.display = "block";
-    }
+async function mintPromise(){
+    return new Promise((resolve,reject)=>{
+        mint();
+        resolve();
+    });    
 }
+
+function minter(){
+    result = mintPromise().then(response => console.log("done"));
+}
+
