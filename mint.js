@@ -1,6 +1,6 @@
 Moralis.initialize("UHL7l7F5sAV2x6pSwUG9hsjGRNz1xrdFPSHzxyOJ");
 Moralis.serverURL = "https://y2opbddnpxpe.usemoralis.com:2053/server";
-const contAdd = "0x47bb4c79e807Ea8c411Bc513915511D03D04bc68";
+const contAdd = "0xEBA9F7B492EbE5b38897d61880aA075be7179E2E";
 
 async function mint(){
     Moralis.authenticate({
@@ -17,5 +17,5 @@ async function mint(){
 
     //Contract Deploy
     const contract = new web3.eth.Contract(abi, contAdd);
-    contract.methods.mint(amount).send({from: address, value: 25000000000000000});
+    contract.methods.mint(amount).send({from: address, value: 50000000000000000});
 }
