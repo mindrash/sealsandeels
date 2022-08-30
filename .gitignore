@@ -5,8 +5,8 @@ __pycache__/
 
 CIDS.csv
 ipfs_out/
-meta_out/
-meta_out_prep/
+meta_out*
+meta_out_prep*
 img_out/
 headshots_out/
 img_*

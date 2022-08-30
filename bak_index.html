@@ -1,0 +1,722 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Seals and Eels</title>
+  <meta name="description" content="Seals and Eels: Quiet. This is serious. Seals mint in even hours. Eels mint in odd hours (UTC timestamp of minting node). If 100 Seals or Eels are minted in an hour then they are rewarded with special weather and the other is punished with bad weather.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+
+  <meta property="og:title" content="Seals and Eels: Quiet. This is serious.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sealsandeels.xyz">
+  <meta property="og:image" content="https://sealsandeels.xyz/tile.png">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="tile.png">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+  <style>
+    /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+    html {
+        -webkit-text-size-adjust: 100%;
+        line-height: 1.4;
+        color: #fff;
+        font: 17px/1.4 "Open Sans", sans-serif;
+        text-align: center
+    }
+
+    body {
+        margin: 0;
+        background-color: #f6d13d;
+    }
+
+    h1 {
+        font-size: 3em;
+        line-height: 1.2em;
+        margin: 0 .5em .75em
+    }
+
+    a {
+        background-color: transparent
+    }
+
+    strong {
+        font-weight: bolder
+    }
+
+    ::-webkit-file-upload-button {
+        -webkit-appearance: button;
+        font: inherit
+    }
+
+    ::-moz-selection {
+        background: #b3d4fc;
+        text-shadow: none
+    }
+
+    ::selection {
+        background: #b3d4fc;
+        text-shadow: none
+    }
+
+    .clearfix::after,
+    .clearfix::before {
+        content: " ";
+        display: table
+    }
+
+    .clearfix::after {
+        clear: both
+    }
+
+    @media print {
+        *,
+        ::after,
+        ::before {
+            background: #fff !important;
+            color: #000 !important;
+            box-shadow: none !important;
+            text-shadow: none !important
+        }
+
+        a,
+        a:visited {
+            text-decoration: underline
+        }
+
+        a[href]::after {
+            content: " (" attr(href) ")"
+        }
+
+        h2,
+        h3,
+        p {
+            orphans: 3;
+            widows: 3
+        }
+
+        h2,
+        h3 {
+            page-break-after: avoid
+        }
+    }
+
+    a {
+        color: #069;
+        text-decoration: none
+    }
+
+    a:active,
+    a:focus,
+    a:hover {
+        text-decoration: underline
+    }
+
+    h2 {
+        font-size: 1.5em;
+        margin: 1.5em 0;
+        color: #5f146e;
+        margin: 0em 0em 1em 0em;
+    }
+
+    h3 {
+        color: #555;
+        font-size: 1.25em;
+        margin: 0 0 .5em
+    }
+
+    p {
+        margin: 0 0 2em
+    }
+
+    .grid {
+        margin: 0 -15px;
+        letter-spacing: -.31em;
+        word-spacing: -.43em;
+        text-rendering: optimizeSpeed
+    }
+
+    .grid-cell {
+        display: inline-block;
+        letter-spacing: normal;
+        text-align: left;
+        text-rendering: auto;
+        vertical-align: top;
+        width: 50%;
+        word-spacing: normal
+    }
+
+    .grid-cell>* {
+        padding: 0 15px
+    }
+
+    .inline-block-list {
+        list-style-type: none;
+        margin: 0;
+        padding: 0
+    }
+
+    .inline-block-list li {
+        display: inline-block;
+        margin: 0 0 0 1.5em;
+        padding: 0;
+        vertical-align: top
+    }
+
+    .inline-block-list li:first-child {
+        margin-left: 0
+    }
+
+    .container {
+        margin: 0 auto;
+    }
+
+    .aside {
+        background-color: #eee;
+        border: solid #e3e3e3;
+        border-width: 1px 0;
+        font-size: 1.125em;
+        padding: 1em 0
+    }
+
+    .btn,
+    .cta-option {
+        display: inline-block;
+        position: relative
+    }
+
+    .cta-option {
+        margin: 2.5em .5em 0;
+        vertical-align: top
+    }
+
+    .btn {
+        color: #fff;
+        font-size: 1.5em;
+        padding: .6em 1em;
+        text-decoration: none;
+        text-shadow: 0 -1px 0 rgba(0, 0, 0, .5);
+        vertical-align: middle;
+        border-radius: 4px;
+        border: 1px solid #333
+    }
+
+    .btn:active,
+    .btn:focus,
+    .btn:hover {
+        text-decoration: none
+    }
+
+    .btn-download {
+        background-color: #d9750b;
+        background-image: linear-gradient(#f90 10%, #e76a00 100%);
+        box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset, 0 1px 3px rgba(0, 0, 0, .2);
+        border: 1px solid #995309
+    }
+
+    .btn-download:active,
+    .btn-download:focus,
+    .btn-download:hover {
+        background-color: #e0811b;
+        background-image: linear-gradient(#f0a100 10%, #f70 100%)
+    }
+
+    .btn-download:active {
+        background-color: #cf6a00;
+        box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .2) inset
+    }
+
+    .star {
+        color: #e08524
+    }
+
+    .Icon {
+        display: inline-block;
+        height: 16px;
+        margin: -3px 1px 0 0;
+        vertical-align: middle;
+        width: 16px
+    }
+
+    .Icon--github {
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjEgMTIxIj48ZyBmaWxsPSIjMTkxNzE3Ij48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTYwLjUgMS42Yy0zMy4zIDAtNjAuNCAyNy02MC40IDYwLjQgMCAyNi43IDE3LjMgNDkuMyA0MS4zIDU3LjMgMyAuNiA0LjEtMS4zIDQuMS0yLjkgMC0xLjQtLjEtNi4yLS4xLTExLjItMTYuNyAzLjYtMjAuMy03LjItMjAuMy03LjItMi43LTctNi43LTguOC02LjctOC44LTUuNS0zLjcuNC0zLjcuNC0zLjcgNi4xLjQgOS4zIDYuMiA5LjMgNi4yIDUuNCA5LjIgMTQuMSA2LjYgMTcuNiA1IC41LTMuOSAyLjEtNi42IDMuOC04LjEtMTMuNC0xLjQtMjcuNS02LjYtMjcuNS0yOS44IDAtNi42IDIuNC0xMiA2LjItMTYuMi0uNi0xLjUtMi43LTcuNy42LTE2IDAgMCA1LjEtMS42IDE2LjYgNi4yIDQuOC0xLjMgMTAtMiAxNS4xLTJzMTAuMy43IDE1LjEgMmMxMS41LTcuOCAxNi42LTYuMiAxNi42LTYuMiAzLjMgOC4zIDEuMiAxNC41LjYgMTYgMy45IDQuMiA2LjIgOS42IDYuMiAxNi4yIDAgMjMuMi0xNC4xIDI4LjMtMjcuNSAyOS44IDIuMiAxLjkgNC4xIDUuNSA0LjEgMTEuMiAwIDguMS0uMSAxNC42LS4xIDE2LjYgMCAxLjYgMS4xIDMuNSA0LjEgMi45IDI0LTggNDEuMy0zMC42IDQxLjMtNTcuMyAwLTMzLjQtMjctNjAuNC02MC40LTYwLjR6Ii8+PHBhdGggZD0iTTIzIDg4LjNjLS4xLjMtLjYuNC0xIC4ycy0uNy0uNi0uNS0uOWMuMS0uMy42LS40IDEtLjJzLjYuNi41Ljl6bS0uOC0uNU0yNS40IDkxYy0uMy4zLS45LjEtMS4yLS4zLS40LS40LS41LTEtLjItMS4zLjMtLjMuOC0uMSAxLjIuMy41LjUuNSAxLjEuMiAxLjN6bS0uNS0uNk0yNy44IDk0LjVjLS40LjMtMSAwLTEuMy0uNS0uNC0uNS0uNC0xLjIgMC0xLjQuNC0uMyAxIDAgMS4zLjUuNC41LjQgMS4xIDAgMS40em0wIDBNMzEuMSA5Ny45Yy0uMy40LTEgLjMtMS42LS4yLS41LS41LS43LTEuMi0uMy0xLjUuMy0uNCAxLS4zIDEuNi4yLjUuNC42IDEuMS4zIDEuNXptMCAwTTM1LjYgOTkuOGMtLjEuNS0uOC43LTEuNS41LS43LS4yLTEuMS0uOC0xLTEuMi4xLS41LjgtLjcgMS41LS41LjcuMiAxLjEuNyAxIDEuMnptMCAwTTQwLjUgMTAwLjJjMCAuNS0uNi45LTEuMy45LS43IDAtMS4zLS40LTEuMy0uOXMuNi0uOSAxLjMtLjljLjcgMCAxLjMuNCAxLjMuOXptMCAwTTQ1LjEgOTkuNGMuMS41LS40IDEtMS4xIDEuMS0uNy4xLTEuMy0uMi0xLjQtLjctLjEtLjUuNC0xIDEuMS0xLjEuNy0uMSAxLjMuMiAxLjQuN3ptMCAwIi8+PC9nPjwvc3ZnPg0K)
+    }
+
+    .Icon--html5 {
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjUwIDEwMSA0MTIgNDEyIj48cGF0aCBmaWxsPSIjRTQ0RDI2IiBkPSJNMTA3LjY0NCA0NzAuODc3bC0zMy4wMTEtMzcwLjI1N2gzNjIuNzM0bC0zMy4wNDYgMzcwLjE5OS0xNDguNTQzIDQxLjE4MXoiLz48cGF0aCBmaWxsPSIjRjE2NTI5IiBkPSJNMjU2IDQ4MC41MjNsMTIwLjAzLTMzLjI3NyAyOC4yNC0zMTYuMzUyaC0xNDguMjd6Ii8+PHBhdGggZmlsbD0iI0VCRUJFQiIgZD0iTTI1NiAyNjguMjE3aC02MC4wOWwtNC4xNS00Ni41MDFoNjQuMjR2LTQ1LjQxMWgtMTEzLjg2OGwxLjA4NyAxMi4xODMgMTEuMTYxIDEyNS4xMzloMTAxLjYyem0wIDExNy45MzZsLS4xOTkuMDUzLTUwLjU3NC0xMy42NTYtMy4yMzMtMzYuMjE3aC00NS41ODVsNi4zNjIgNzEuMzAxIDkzLjAyIDI1LjgyMy4yMDktLjA1OHoiLz48cGF0aCBmaWxsPSIjZmZmIiBkPSJNMjU1Ljg0MyAyNjguMjE3djQ1LjQxaDU1LjkxOGwtNS4yNzEgNTguODk0LTUwLjY0NyAxMy42N3Y0Ny4yNDRsOTMuMDk0LTI1LjgwMS42ODMtNy42NzIgMTAuNjcxLTExOS41NTEgMS4xMDgtMTIuMTk0aC0xMi4yMzd6bTAtOTEuOTEydjQ1LjQxMWgxMDkuNjg4bC45MTEtMTAuMjA3IDIuMDY5LTIzLjAyMSAxLjA4Ni0xMi4xODN6Ii8+PC9zdmc+DQo=)
+    }
+
+    .Icon--stackoverflow {
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjMgMi44IDU4LjIgNTgiPjxwYXRoIGQ9Ik05LjMwNSAzNi44NDhsNC40MDEuMDQzLS4xNTMgMTkuNTk4aDI5LjI5MXYtMTkuNTI4aDQuNjM4djI0LjI4N2gtMzguMjAxbC4wMjQtMjQuNDAxem03LjE3NyAxMS41ODZoMjIuOTQ1djQuODgyaC0yMi45NDV6IiBmaWxsPSIjOTE5MTkxIi8+PHBhdGggZmlsbD0iI2E3OGI2OCIgZD0iTTE3LjAyIDM5LjY0OGwyMi45NiAyLjIxNi0uNDgxIDQuOTgxLTIyLjk2LTIuMjE2eiIvPjxwYXRoIGZpbGw9IiNjMTk2NTMiIGQ9Ik0xOS4xMjEgMjkuNzEzbDIyLjIgNi4yNjYtMS4zNTkgNC44MTYtMjIuMi02LjI2NnoiLz48cGF0aCBmaWxsPSIjZDQ4YzI4IiBkPSJNMjQuNTAxIDE4LjQ4NGwxOS43NDUgMTEuOTI2LTIuNTg3IDQuMjgzLTE5Ljc0NS0xMS45MjZ6Ii8+PHBhdGggZmlsbD0iI2ZlODkwOCIgZD0iTTM1LjczMyA3Ljg0OWwxMy40MzUgMTguNzUxLTQuMDY4IDIuOTE0LTEzLjQzNS0xOC43NTF6Ii8+PHBhdGggZmlsbD0iI2ZmN2ExNSIgZD0iTTUxLjM0IDIuNzUxbDMuODAyIDIyLjc1Mi00LjkzNi44MjUtMy44MDItMjIuNzUyeiIvPjwvc3ZnPg0K)
+    }
+
+    .site-header {
+        padding-top: 50px
+    }
+
+    .site-logo {
+        color: #fff;
+        float: left;
+        font-size: 25px;
+        font-weight: 700;
+        line-height: 32px;
+        text-decoration: none;
+        text-shadow: 2px 2px 0 #000;
+        text-transform: uppercase
+    }
+
+    .site-footer a,
+    .site-nav a {
+        color: #ffa000
+    }
+
+    .site-footer {
+        font-size: .875em;
+        padding: 2em;
+        background-color: #5f146e;
+      }
+
+    .site-nav {
+        float: right;
+        list-style-type: none;
+        margin: 7px 0 0;
+        padding: 0
+    }
+
+    .site-nav a {
+        display: block;
+        text-decoration: none;
+        text-transform: uppercase
+    }
+
+    .site-nav a:active,
+    .site-nav a:focus,
+    .site-nav a:hover {
+        color: #fff
+    }
+
+    .site-promo {
+        padding: 1em 0 6em;
+        background-image: url(img/sealsandeels-bg.png);
+        background-size: 1500px;
+        height: 550px;
+    }
+
+    .site-promo .description {
+        color: #ddd;
+        font-size: 1.2em;
+        margin: 1em 2em 0
+    }
+
+    .last-update {
+        color: #999;
+        display: block;
+        font-size: .75em;
+        margin-top: 10px
+    }
+
+    .site-section {
+        color: #333;
+        overflow: hidden;
+        padding: 2em 0 6em;
+        width: 80%;
+        max-width: 800px;
+        margin: auto;
+        padding: ;
+    }
+
+    .site-section-video {
+        background-color: transparent;
+        color: #fff;
+        text-align: center;
+        padding: 2em 0 3em
+    }
+
+    .site-section-video .content {
+        max-width: 720px;
+        margin: auto;
+        padding: 10px
+    }
+
+    .site-section-video .content a {
+        color: #ffa000
+    }
+
+    .site-section-video .content .new {
+        text-align: left
+    }
+
+    .site-section-video h2 {
+        margin: 1em 0
+    }
+
+    .in-the-wild {
+        font-size: 1.25em;
+        margin: 0 auto;
+        max-width: 720px
+    }
+
+    @media only screen and (max-width:800px) {
+        .site-logo,
+        .site-nav {
+            float: none
+        }
+
+        .site-nav li {
+            margin: 0 .5em
+        }
+
+        .site-header {
+            padding-top: 40px
+        }
+
+        .site-promo {
+            padding: 3em 0
+        }
+
+        .site-section {
+            padding: 0 1em 4em
+        }
+    }
+
+    @media only screen and (max-width:600px) {
+        html {
+            font-size: 14px
+        }
+
+        .last-update,
+        .site-footer {
+            font-size: 1em
+        }
+
+        .inline-block-list li {
+            display: block;
+            margin: 0 auto 1.5em
+        }
+
+        .inline-block-list li:last-child {
+            margin: 0
+        }
+    }
+
+    @media only screen and (max-width:460px) {
+        .grid-cell {
+            width: 100%
+        }
+    }
+
+    @media only screen and (max-width:420px) {
+        h1 {
+            font-size: 2.5em
+        }
+
+        html {
+            font-size: 13px
+        }
+    }
+
+    @media print {
+        h1 {
+            padding: 1em 0 0
+        }
+
+        .site-promo {
+            margin: 1em;
+            padding: 0
+        }
+
+        .site-section {
+            padding: 0;
+            margin: 2em 1em
+        }
+
+        .site-section-video {
+            display: none
+        }
+    }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+<script src="https://unpkg.com/moralis@0.0.184/dist/moralis.js"></script>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="site-promo">
+      <img src="img/sealsandeels-title.png" style="max-width: 600px; width: 70%;margin: 0px;padding: 0px;border: 0px;" />
+      <br/><br/>
+      <div style="background-color: #fff;width: 80%;max-width: 600px;margin: 0 auto;padding: 2em;opacity:.90;border-radius: 25px;">
+        <h3 style="color: #5f146e;">
+          Seals mint in even hours. Eels mint in odd hours.<br>
+          <span style="font-size: smaller;font-weight: lighter;">(UTC timestamp of minting node)</span>
+        </h3>
+        <a class="btn btn-download" href="#" onclick="return false;"><strong>Public Mint Aug 31 </strong>
+        <span class="version"> for .05 ETH</span></a>
+        <p style="color: #333;font-size: smaller; padding: .5em;">
+          Don't trust this site? Mint on <a href="https://etherscan.io/address/0x4ac8dB1088B40fd126A716555dB80B169Ce5da16#writeContract#F2" target="_blank">Etherscan</a>.
+        </p>    
+        <p style="color: #fff;padding-top:1em;background-color: #5f146e;;border-radius: 25px;padding: 10px;margin: 1em;">
+          If <strong>100</strong> Seals or Eels are minted in an hour then they are <strong><i>rewarded</i></strong> with <strong>special weather</strong> and the other is <strong><i>punished</i></strong> with <strong>bad weather</strong>.
+        </p>
+        <!--
+        <p id="mintStatus" style="color: #5f146e;background-color: #fff;;border-radius: 25px;padding: 10px;margin: 1em;displaY: none;">
+          <strong>Congratulations on your Seal and Eel. Today is the best day!</strong><br />
+          View now on <a href="https://opensea.io"><img src="https://storage.googleapis.com/opensea-static/Logomark/OpenSea-Full-Logo%20(dark).png" width="150" /></a>
+        </p>
+        -->
+        <p style="color: #5f146e;padding-top:2em;padding-bottom: 0em;font-weight: bolder;">
+          View the 333 private mint demonstration on 
+          <a href="https://opensea.io/collection/seals-and-eels">Opensea</a> and <a href="https://rarible.com/collection/0x4ac8db1088b40fd126a716555db80b169ce5da16/items">Rarible</a>          
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="site-section" style="background-color: #f5f9bf;width: 80%;max-width: 600px;margin: 1em auto;padding: 2em;opacity:.90;border-radius: 25px;">
+    <div class="container">
+      <h2>Quiet. This Is Seriously Good.</h2>
+      <div class=grid>
+          <div class=grid-cell>
+              <h3>Generative Art Component</h3>
+              <p>
+                Inline with the weather elements, the backgrounds are <strong>monthly heat maps</strong> generated with 
+                <a href="https://matplotlib.org/">matplotlib</a> and 2 years of weather station data. I have a passion for 
+                creative coding and generative art with an emphasis on data influenced algorithms.
+              </p>
+          </div>
+          <div class=grid-cell>
+              <h3>Hourly Type Selector</h3>
+              <p>
+                Each hour the <strong>minting flips</strong> between either all Seals or all Eels. Seals are minted in even numbered hours and 
+                Eels in odd numbered hours. <strong>You can choose if you are on team Seal, team Eel, or just leave it up to chance.</strong>  
+              </p>
+          </div>
+          <div class=grid-cell>
+              <h3>Mint Activity Influenced Weather Events</h3>
+              <p>
+                If <strong>100</strong> Seals or Eels are minted in an hour then they are <strong>rewarded with special 
+                weather</strong> and the other is <strong>punished with bad weather</strong>. Watch out for high winds, lightning strikes, 
+                scorching heat, heavy snow, or rainbows and stars! 
+
+              </p>
+          </div>
+          <div class=grid-cell>
+              <h3>Headshot (aka PFP) Included</h3>
+              <p>
+                Want to show off your Seal or Eel <strong>PFP</strong> style? This is covered with a headshot image cropped from the original 
+                and included in the <strong>attributes (ipfs_url)</strong> <a href="https://nftstorage.link/ipfs/bafybeic2gughwyzwtarjytvugutubptxlavdnukdxf3grrvfkluz3jgcc4/seal-headshot-96.png" target="_blank">(example)</a>. I like to think of Seals and Eels as an art piece, but it is 
+                many things with many influences.
+              </p>
+          </div>
+          <div class=grid-cell>
+            <h3>Parallel Universe</h3>
+            <p>
+              Every time a Seal or Eel is minted, a <strong>parallel art piece of the other type is left unclaimed</strong>. If a Seal is minted, then 
+              there is a parallel universe Eel and vice versa. After the last NFT in the collection is minted, a snapshot will be taken 
+              of the current holders <strong>7 days following at 12:00 PM PST</strong>. Holders in the snapshot will be added to the whitelist for 
+              the Seals and Eels Parallel Universe free mint (gas not included) to <strong>claim their long lost seal or eel</strong>.
+            </p>
+        </div>
+        <div class=grid-cell>
+          <h3>Art Specifications</h3>
+          <p>
+            I hope for each Seal and Eel to be appreciated as NFT art. There are creative coding and generative art influences 
+            including data influenced algorithms. This was also created with dimensions which should be decently printable:
+            <br/><br/>
+            <strong>Dimensions:</strong> 4600px x 4600px<br/>
+            <strong>Headshot:</strong> 1400px x 1400px<br/>
+            <strong>Image Type:</strong> <a href="https://en.wikipedia.org/wiki/Portable_Network_Graphics">PNG</a><br/>
+            <strong>Blockchain:</strong> Ethereum<br/>
+            <strong>Distributed:</strong> IPFS
+          </p>
+      </div>
+  </div>
+  </div>
+</div>
+<div class="site-section" style="background-color: #f5f9bf;width: 80%;max-width: 600px;margin: 1em auto;padding: 2em;opacity:.90;border-radius: 25px;">
+  <div class="container">
+    <h2>Attributes Rundown</h2>
+    <style>
+      #attributes {
+        width: 100%;
+        text-align: left;
+        border-collapse: collapse;
+      }
+
+      #attributes td {
+        vertical-align: top;
+        padding: 10px;
+      }
+
+      #attributes th {
+        padding: 10px;
+      }
+
+      #attributes tbody tr {
+        border-bottom: 1px solid;
+        border-color: #937c97;
+      }
+</style>
+    <table id="attributes">
+      <tr>
+        <th>attribute</th>
+        <th>description</th>
+      </tr>
+      <tr>
+        <td>backgrounds</td>
+        <td>Heatmaps generated with matplotlib from 2 years of weather station data and 80 color palettes. 10% of weather data is randomly generated.</td>
+      </tr>
+      <tr>
+        <td>precipitation</td>
+        <td>50% of time rain or snow</td>
+      </tr>
+      <tr>
+        <td>snow</td>
+        <td>33% of time when precipitation</td>
+      </tr>
+      <tr>
+        <td>sun</td>
+        <td>33% of time when not bad weather</td>
+      </tr>
+      <tr>
+        <td>clouds</td>
+        <td>random variations depending on weather conditions</td>
+      </tr>
+      <tr>
+        <td>rainbows</td>
+        <td>Special weather event (technically raining rainbows) influenced by minting activity</td>
+      </tr>
+      <tr>
+        <td>stars</td>
+        <td>Special weather event influenced by minting activity</td>
+      </tr>
+      <tr>
+        <td>bad weather</td>
+        <td>Weather event influenced by minting activity including high winds, lightning, heavy snow, and scorching heat.</td>
+      </tr>
+      <tr>
+        <td>umbrella</td>
+        <td>50% of time when has rain</td>
+      </tr>
+      <tr>
+        <td>hair</td>
+        <td>10% of time. Various styles.</td>
+      </tr>
+      <tr>
+        <td>hats</td>
+        <td>5% of time when not has hair. Various styles.</td>
+      </tr>
+      <tr>
+        <td>buddy</td>
+        <td>5% of time when not has hair. Various styles.</td>
+      </tr>
+      <tr>
+        <td>shades</td>
+        <td>If sunny. Various styles.</td>
+      </tr>
+      <tr>
+        <td>teeth</td>
+        <td>20% of time. Various styles.</td>
+      </tr>
+      <tr>
+        <td>tongue</td>
+        <td>20% of time</td>
+      </tr>
+      <tr>
+        <td>mustaches</td>
+        <td>20% of time. Various styles.</td>
+      </tr>
+      <tr>
+        <td>ring</td>
+        <td>20% of time - seal has nose ring, eel has lip ring</td>
+      </tr>
+      <tr>
+        <td>body colors</td>
+        <td>Random variations of hue, spots, stripes</td>
+      </tr>
+      <tr>
+        <td>easter eggs</td>
+        <td>Some easter egg surprises along the way!</td>
+      </tr>
+    </table>
+  </div>
+</div>
+<div class="site-section" style="background-color: #f5f9bf;width: 80%;max-width: 600px;margin: 1em auto;padding: 2em;opacity:.90;border-radius: 25px;">
+  <div class="container" style="text-align: left;">
+    <h2  style="text-align: center;">Questions and Answers</h2>
+    <p>
+      <h3>What is the maximum supply and why?</h3>
+      The <strong>maximum supply is 13,333</strong>. Many know that 10,000 was established as a bit of a norm in the space,  
+      but for this series it made sense to increase because of the 2 different types in play - Seals and Eels. Increasing 
+      this number slightly will <strong>allow the algorithm to explore more of the variations for both</strong>. Additionally, the first 333 will be created 
+      in the private mint stage to demonstrate what the series is all about. The first 333 will be minted to mindrash.
+    </p>
+    <p>
+      <h3>Is there a roadmap?</h3>
+      The series is meant to be appreciated for what it is, but there is a bit of excitement still to come in the <strong>Parallel Universe 
+      feature</strong>. The counterpart of a Seal or Eel is always created, but only one will be selected depending on it being an odd or even hour. 
+      The parallel universe counterpart will be mutated a bit and then available to be minted by holders <strong>using a snapshot the week following 
+      the final Seals and Eels mint</strong>. 
+    </p>
+    <p>
+      <h3>How is Seals and Eels Licensed?</h3>
+      See the <a href="https://www.nftlicense.org/">NFT 2.0 License</a>.
+    </p>
+    <p>
+      <h3>Is there a Discord?</h3>
+      I'm not a believer that all projects need a discord or a community. I'm sure you have a lot to keep up with already. 
+      If for some reason these form organically, it will have gone far beyond my expectations as a project. You can always reach out 
+      to me on Twitter or just tweet up some <strong>#sealsandeels</strong>!
+    </p>
+    <p>
+      <h3>What do they freaking look like?</h3>
+      You've read this far and have no idea what these look like. Check out the 333 private mint demonstration on 
+      <strong><a href="https://opensea.io/collection/seals-and-eels">Opensea</a> and <a href="https://rarible.com/seals-and-eels/items">Rarible</a></strong>.
+      <br/><br/>
+      <a href="https://opensea.io/collection/seals-and-eels"><img src="img/examples.png" width="100%" alt="examples"/></a>
+      <br/><br/>
+      <a href="https://opensea.io/collection/seals-and-eels"><img src="img/headshots.png" width="100%" alt="headshots"/></a>
+    </p>
+  </div>
+</div>
+<footer class=site-footer>
+  <p><a class=twitter-share-button href=https://twitter.com/share data-count=none data-lang=en data-via=mindrash
+          data-size=large data-text="Seals and Eels: Quiet. This is serious. #sealsandeels"
+          data-url=https://sealsandeels.xyz/>Tweet</a> &nbsp; <a class=twitter-follow-button
+          href=https://twitter.com/mindrash data-show-count=false data-lang=en data-size=large>Follow @mindrash</a>
+<pre style="text-align: left;margin: auto;width: 600px;">
+<code>
+ ____             _                       _   _____     _     
+/ ___|  ___  __ _| |___    __ _ _ __   __| | | ____|___| |___ 
+\___ \ / _ \/ _` | / __|  / _` | '_ \ / _` | |  _| / _ \ / __|
+ ___) |  __/ (_| | \__ \ | (_| | | | | (_| | | |__|  __/ \__ \
+|____/ \___|\__,_|_|___/  \__,_|_| |_|\__,_| |_____\___|_|___/ by @mindrash
+
+Special thanks:
+- Steve Rinella and krose for the inspiration
+- NFT.Storage for the pins
+- Matplotlib - data can be beautiful and meaningful
+- Chiru Labs, Openzeppelin
+</code>
+</pre>
+
+© 2022 <a href="http://mindrash.com">mindrash</a> and licensed with the <a href="https://www.nftlicense.org/">NFT 2.0 License</a>
+</footer>
+
+<script src="js/vendor/modernizr-3.11.2.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+<script src="abi.js?v1"></script>
+<script src="mint.js?v1"></script>
+<script src="minter.js?v1"></script>
+
+<script>!function (l, u) { "use strict"; var t, e, a, n, o, r, d = l.document; function i(t) { var e, a, n, o, r, i, c, g = function t(e, a) { return !0 === e.hasAttribute(a) ? e : e.parentNode !== d.body ? t(e.parentNode, a) : u }(t.target, "data-ga-action"), s = !1; g !== u && (e = g.getAttribute("data-ga-action") || u, a = g.getAttribute("data-ga-category") || u, n = g.getAttribute("data-ga-label") || u, o = g.getAttribute("href"), r = parseInt(g.getAttribute("data-ga-value"), 10) || u, ga !== u && a !== u && e !== u && (t.preventDefault(), "Download" !== a && !0 !== t.ctrlKey && !0 !== t.metaKey && 2 !== t.which || (s = !0, l.open(o)), i = o, ga("send", "event", a, e, n, r, { hitCallback: function () { !1 === s && (c !== u && clearTimeout(c), l.location = i) } }), c = setTimeout(function () { !1 === s && (l.location.href = i) }, 1e3))) } e = d, a = "script", n = "ga", (t = l).GoogleAnalyticsObject = n, t.ga || (t.ga = function () { (t.ga.q = t.ga.q || []).push(arguments) }), t.ga.l = +new Date, o = e.createElement(a), r = e.getElementsByTagName(a)[0], o.src = "https://www.google-analytics.com/analytics.js", r.parentNode.insertBefore(o, r), ga("create", "UA-17904194-1", "auto"), ga("set", "anonymizeIp", !0), ga("send", "pageview"), l.document.addEventListener("click", i), l.onload = function () { var t, e, a, n, o; e = "script", a = "twitter-wjs", o = (t = d).getElementsByTagName(e)[0], t.getElementById(a) || ((n = t.createElement(e)).id = a, n.src = "https://platform.twitter.com/widgets.js", o.parentNode.insertBefore(n, o)) } }(window)</script>
+</body>
+
+</html>
