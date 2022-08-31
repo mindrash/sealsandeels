@@ -458,13 +458,13 @@
           <span style="font-size: smaller;font-weight: lighter;">(UTC timestamp of minting node)</span>
         </h3>
         <a class="btn btn-download" href="#" onclick="mint();return false;">
-        <span class="version">Mint now for .04 ETH</span></a>
+        <span class="version">Mint now for .02 ETH</span></a>
         <p style="color: #333;font-size: smaller; padding: .5em;">
           <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
           <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
           <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
           Don't trust this site? Mint on <a href="https://etherscan.io/address/0x4ac8dB1088B40fd126A716555dB80B169Ce5da16#writeContract#F2" target="_blank">Etherscan</a><br/>
-          (enter 40000000000000000 for cost - relax thats WEI not ETH)
+          (enter 20000000000000000 for cost - relax thats WEI not ETH)
         </p>    
         <p style="color: #fff;padding-top:1em;background-color: #5f146e;;border-radius: 25px;padding: 10px;margin: 1em;">
           If <strong>100</strong> Seals or Eels are minted in an hour then they are <strong><i>rewarded</i></strong> with <strong>special weather</strong> and the other is <strong><i>punished</i></strong> with <strong>bad weather</strong>.
@@ -708,8 +708,8 @@ Special thanks:
 <script src="js/vendor/modernizr-3.11.2.min.js"></script>
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
-<script src="abi.js?v3"></script>
-<script src="mint.js?v5"></script>
+<script src="abi.js?v6"></script>
+<script src="mint.js?v6"></script>
 <script>!function (l, u) { "use strict"; var t, e, a, n, o, r, d = l.document; function i(t) { var e, a, n, o, r, i, c, g = function t(e, a) { return !0 === e.hasAttribute(a) ? e : e.parentNode !== d.body ? t(e.parentNode, a) : u }(t.target, "data-ga-action"), s = !1; g !== u && (e = g.getAttribute("data-ga-action") || u, a = g.getAttribute("data-ga-category") || u, n = g.getAttribute("data-ga-label") || u, o = g.getAttribute("href"), r = parseInt(g.getAttribute("data-ga-value"), 10) || u, ga !== u && a !== u && e !== u && (t.preventDefault(), "Download" !== a && !0 !== t.ctrlKey && !0 !== t.metaKey && 2 !== t.which || (s = !0, l.open(o)), i = o, ga("send", "event", a, e, n, r, { hitCallback: function () { !1 === s && (c !== u && clearTimeout(c), l.location = i) } }), c = setTimeout(function () { !1 === s && (l.location.href = i) }, 1e3))) } e = d, a = "script", n = "ga", (t = l).GoogleAnalyticsObject = n, t.ga || (t.ga = function () { (t.ga.q = t.ga.q || []).push(arguments) }), t.ga.l = +new Date, o = e.createElement(a), r = e.getElementsByTagName(a)[0], o.src = "https://www.google-analytics.com/analytics.js", r.parentNode.insertBefore(o, r), ga("create", "UA-17904194-1", "auto"), ga("set", "anonymizeIp", !0), ga("send", "pageview"), l.document.addEventListener("click", i), l.onload = function () { var t, e, a, n, o; e = "script", a = "twitter-wjs", o = (t = d).getElementsByTagName(e)[0], t.getElementById(a) || ((n = t.createElement(e)).id = a, n.src = "https://platform.twitter.com/widgets.js", o.parentNode.insertBefore(n, o)) } }(window)</script>
 </body>
 </html>
