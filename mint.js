@@ -16,5 +16,6 @@ async function mint(){
 
     //Contract Deploy
     const contract = new web3.eth.Contract(abi, contAdd);
-    contract.methods.mint(amount).send({from: address, value: 20000000000000000}); // mint compliance on contract so no need to try to manipulate this people
+    contract.methods.mint(amount).send({from: address, value: 00000000000000000}); // mint compliance on contract so no need to try to manipulate this people
+    //contract.methods.mint(amount).send({from: address, value: 20000000000000000}); // mint compliance on contract so no need to try to manipulate this people
 }
